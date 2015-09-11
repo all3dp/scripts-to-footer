@@ -360,7 +360,6 @@ class Scripts_To_Footer {
 			if( $this->tax_supported( 'category' ) ) {
 				$type = "category_archive";
 			} else {
-				$this->log_me( 'Error in category check' );
 				return false;
 			} 
 	
@@ -370,7 +369,6 @@ class Scripts_To_Footer {
 			if( $this->tax_supported( 'post_tag' ) ) {
 				$type = "post_tag_archive";
 			} else {
-				$this->log_me( 'Error in tag check' );
 				return false;
 			} 
 		
@@ -385,7 +383,6 @@ class Scripts_To_Footer {
 			if( isset( $tax->name ) && $this->tax_supported( $tax->name ) ) {
 				$type = "{$tax->name}_archive";
 			} else {
-				$this->log_me( 'Error in taxonomy check' );
 				return false;
 			} 
 			
@@ -396,7 +393,6 @@ class Scripts_To_Footer {
 			if( $this->post_type_supported( $post_type ) ) {
 				$type = "{$post_type}_archive";
 			} else {
-				$this->log_me( 'Error in post type check check' );
 				return false;
 			}
 
